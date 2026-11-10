@@ -1,0 +1,114 @@
+name: Deploy pinned reviewed Pages archive
+
+on:
+  push:
+    branches: [main]
+    paths: [site-release.zip, .github/workflows/deploy-pages.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    if: github.repository == 'Mingcarehome/mingcare-intranet-test'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    env:
+      SITE_ARCHIVE_SHA256: 525206f07a0490b50fd1aab7057eb9e4c1771562f67383be27a5fedb57741410
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/configure-pages@v5
+      - name: Extract pinned reviewed static artifact
+        run: |
+          python3 - <<'PY'
+          import hashlib, os, pathlib, re, stat, zipfile
+          archive = pathlib.Path('site-release.zip')
+          expected = os.environ.get('SITE_ARCHIVE_SHA256', '')
+          if not re.fullmatch(r'[0-9a-f]{64}', expected):
+              raise SystemExit('Archive rejected: missing digest pin')
+          if archive.stat().st_size > 100 * 1024 * 1024:
+              raise SystemExit('Archive rejected: archive size limit')
+          with archive.open('rb') as stream:
+              actual = hashlib.file_digest(stream, 'sha256').hexdigest()
+          if actual != expected:
+              raise SystemExit('Archive rejected: digest mismatch')
+          root = pathlib.Path('_site').absolute()
+          if root.exists():
+              raise SystemExit('Archive rejected: nonempty extraction destination')
+          seen, approved, total = set(), [], 0
+          allowed = {'.html','.js','.css','.txt','.json','.xml','.webmanifest','.svg','.png','.jpg','.jpeg','.gif','.webp','.ico','.woff','.woff2','.ttf','.eot'}
+          with zipfile.ZipFile(archive) as source:
+              if len(source.infolist()) > 4000:
+                  raise SystemExit('Archive rejected: entry limit')
+              for info in source.infolist():
+                  name = info.orig_filename
+                  parts = name.rstrip('/').split('/')
+                  mode = stat.S_IFMT(info.external_attr >> 16)
+                  if (not name or '\\' in name or ':' in name or name.startswith('/')
+                          or any(part in ('', '.', '..') for part in parts)
+                          or any(ord(char) < 32 or ord(char) == 127 for char in name)
+                          or mode not in (0, stat.S_IFREG, stat.S_IFDIR)
+                          or info.flag_bits & 1 or parts[0] != 'site'):
+                      raise SystemExit('Archive rejected: unsafe entry')
+                  if len(parts) == 1:
+                      if info.is_dir():
+                          continue
+                      raise SystemExit('Archive rejected: expected site directory')
+                  relative = '/'.join(parts[1:])
+                  if (any(part.startswith('.') for part in parts[1:]) and relative != '.nojekyll'):
+                      raise SystemExit('Archive rejected: hidden entry')
+                  if re.search(r'stamp|seal|印章', relative, re.IGNORECASE):
+                      raise SystemExit('Archive rejected: private company asset')
+                  if not info.is_dir() and relative != '.nojekyll' and pathlib.PurePosixPath(relative).suffix.lower() not in allowed:
+                      raise SystemExit('Archive rejected: source or unsupported artifact')
+                  identity = relative.casefold()
+                  if identity in seen:
+                      raise SystemExit('Archive rejected: duplicate entry')
+                  seen.add(identity)
+                  total += info.file_size
+                  if total > 100 * 1024 * 1024 or info.file_size > 20 * 1024 * 1024:
+                      raise SystemExit('Archive rejected: expanded size limit')
+                  if relative == '.nojekyll' and info.file_size != 0:
+                      raise SystemExit('Archive rejected: invalid nojekyll marker')
+                  if not info.is_dir():
+                      approved.append((info, root.joinpath(*parts[1:])))
+              required = {'index.html', '404.html', '.nojekyll'}
+              actual_files = {target.relative_to(root).as_posix() for _, target in approved}
+              if not required.issubset(actual_files):
+                  raise SystemExit('Archive rejected: missing required static output')
+              root.mkdir()
+              for info, target in approved:
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  with source.open(info) as incoming, target.open('xb') as outgoing:
+                      while chunk := incoming.read(1024 * 1024):
+                          outgoing.write(chunk)
+          print('Reviewed static archive extracted for Pages.')
+          PY
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+          include-hidden-files: true
+
+  deploy:
+    if: github.repository == 'Mingcarehome/mingcare-intranet-test'
+    needs: upload
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
