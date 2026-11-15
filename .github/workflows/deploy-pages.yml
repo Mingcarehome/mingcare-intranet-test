@@ -21,7 +21,7 @@ jobs:
       contents: read
       pages: read
     env:
-      SITE_ARCHIVE_SHA256: c4294b15ea06794b848648337119d3c4f5e030b7ff1481f37f806ab7341e0ec6
+      SITE_ARCHIVE_SHA256: d282cae13c831b52f0c47351c49b721236ea6e7a0abe49fdd867b785798d982f
     steps:
       - uses: actions/checkout@v6
         with:
