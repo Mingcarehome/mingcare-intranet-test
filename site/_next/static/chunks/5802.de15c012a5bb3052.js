@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[5802],{5802:(u,n,e)=>{e.d(n,{EV:()=>s,zg:()=>t});function t(){return!0}function s(){0;return"https://yyjhgruyieldrcpxauuu.supabase.co/functions/v1/intranet-web"}}}]);
