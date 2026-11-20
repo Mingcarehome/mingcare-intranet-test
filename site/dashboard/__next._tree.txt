@@ -3,4 +3,4 @@
 :HL["/mingcare-intranet-test/_next/static/css/6732183424fe8c00.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"dashboard","h":96,"c":"$Q2"}]]
-0:{"b":"coIs6_P6UWZ-85gA5NwgJ","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"c90ZXeXTgfXlBPZfKqUqq","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
