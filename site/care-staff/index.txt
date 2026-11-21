@@ -6,27 +6,28 @@
 6:I[6965,["7177","$4"],"$5"]
 a:I[9801,[],"ClientPageRoot"]
 b:"static/chunks/1466-bb4d1f813a3fe298.js"
-c:"static/chunks/3971-45fcf9e97bb417d0.js"
+c:"static/chunks/3971-1faa56e29909eef2.js"
 d:"static/chunks/5076-b0da34b6d3cbba8e.js"
-e:"static/chunks/app/care-staff/page-a52022c614966f3b.js"
-f:I[2355,["1466","$b","3971","$c","5076","$d","9141","$e"],"default"]
-12:I[1619,[],"OutletBoundary"]
-13:"$Sreact.suspense"
-15:"ViewportBoundary"
-16:I[1619,[],"$15"]
-18:"MetadataBoundary"
-19:I[1619,[],"$18"]
-1b:I[7512,[],"default",1]
-:HL["/mingcare-intranet-test/_next/static/css/d6d3b622c80c101a.css","style"]
+e:"static/chunks/8946-5757b11e1ce1fe7d.js"
+f:"static/chunks/app/care-staff/page-d60135ec8432861d.js"
+10:I[2172,["1466","$b","3971","$c","5076","$d","8946","$e","9141","$f"],"default"]
+13:I[1619,[],"OutletBoundary"]
+14:"$Sreact.suspense"
+16:"ViewportBoundary"
+17:I[1619,[],"$16"]
+19:"MetadataBoundary"
+1a:I[1619,[],"$19"]
+1c:I[7512,[],"default",1]
+:HL["/mingcare-intranet-test/_next/static/css/b5d14bef600b74e1.css","style"]
 :HL["/mingcare-intranet-test/_next/static/css/a6bc719912976e72.css","style"]
 8:X
-9:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","$La",null,{"Component":"$f","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@10","$@11"]}}],null,["$","$L12",null,{"children":["$","$13",null,{"name":"Next.MetadataOutlet","children":"$@14"}]}]]}],"p":false,"v":null}}]]
+9:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","$La",null,{"Component":"$10","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@11","$@12"]}}],null,["$","$L13",null,{"children":["$","$14",null,{"name":"Next.MetadataOutlet","children":"$@15"}]}]]}],"p":false,"v":null}}]]
 7:[["children",{"s":"care-staff","h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$8"},"c":"$Q9"}]]
-0:{"P":null,"c":["","care-staff",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/mingcare-intranet-test/_next/static/css/d6d3b622c80c101a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/mingcare-intranet-test/_next/static/css/a6bc719912976e72.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"zh-HK","className":"scroll-smooth","data-scroll-behavior":"smooth","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://yyjhgruyieldrcpxauuu.supabase.co","crossOrigin":"anonymous"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"mobile-web-app-capable","content":"yes"}],["$","meta",null,{"name":"apple-mobile-web-app-capable","content":"yes"}],["$","meta",null,{"name":"apple-mobile-web-app-status-bar-style","content":"default"}],["$","meta",null,{"name":"theme-color","content":"#ffffff"}]]}],["$","body",null,{"className":"mc-intranet-theme mobile-friendly antialiased","children":[false,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L6",null,{}]]}]]}]]}],"p":false,"v":null},"c":"$Q7"},"h":{"r":["$","$1","h",{"children":[null,["$","$L16",null,{"children":"$L17"}],["$","$L19",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$13",null,{"name":"Next.Metadata","children":"$L1a"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$1b",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"c90ZXeXTgfXlBPZfKqUqq"}
+0:{"P":null,"c":["","care-staff",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/mingcare-intranet-test/_next/static/css/b5d14bef600b74e1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/mingcare-intranet-test/_next/static/css/a6bc719912976e72.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"zh-HK","className":"scroll-smooth","data-scroll-behavior":"smooth","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://yyjhgruyieldrcpxauuu.supabase.co","crossOrigin":"anonymous"}],["$","meta",null,{"name":"format-detection","content":"telephone=no"}],["$","meta",null,{"name":"mobile-web-app-capable","content":"yes"}],["$","meta",null,{"name":"apple-mobile-web-app-capable","content":"yes"}],["$","meta",null,{"name":"apple-mobile-web-app-status-bar-style","content":"default"}],["$","meta",null,{"name":"theme-color","content":"#ffffff"}]]}],["$","body",null,{"className":"mc-intranet-theme mobile-friendly antialiased","children":[false,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L6",null,{}]]}]]}]]}],"p":false,"v":null},"c":"$Q7"},"h":{"r":["$","$1","h",{"children":[null,["$","$L17",null,{"children":"$L18"}],["$","$L1a",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$14",null,{"name":"Next.Metadata","children":"$L1b"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$1c",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"YTKL_v7xMzGY7URGgBXVo"}
 8:C
-10:{}
-11:"$9:0:1:d:r:props:children:0:props:serverProvidedParams:params"
-17:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}]]
-1c:I[5644,[],"IconMark"]
-14:null
-1a:[["$","title","0",{"children":"明家居家護理服務 - Intranet"}],["$","meta","1",{"name":"description","content":"明家居家護理服務內部管理系統"}],["$","link","2",{"rel":"icon","href":"/mingcare-intranet-test/icon.png?ce74063d6acc4f04","type":"image/png","sizes":"987x286"}],["$","$L1c","3",{}]]
+11:{}
+12:"$9:0:1:d:r:props:children:0:props:serverProvidedParams:params"
+18:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"}]]
+1d:I[5644,[],"IconMark"]
+15:null
+1b:[["$","title","0",{"children":"明家居家護理服務 - Intranet"}],["$","meta","1",{"name":"description","content":"明家居家護理服務內部管理系統"}],["$","link","2",{"rel":"icon","href":"/mingcare-intranet-test/icon.png?ce74063d6acc4f04","type":"image/png","sizes":"987x286"}],["$","$L1d","3",{}]]
