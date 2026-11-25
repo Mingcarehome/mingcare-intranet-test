@@ -1,5 +1,5 @@
-:HL["/mingcare-intranet-test/_next/static/css/6161e3cc6e3190f2.css","style"]
+:HL["/mingcare-intranet-test/_next/static/css/0cfe48a08d860e35.css","style"]
 :HL["/mingcare-intranet-test/_next/static/css/a6bc719912976e72.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"test-sweet-messages","h":96,"c":"$Q2"}]]
-0:{"b":"mOXbPe1gxrJ-vVpQbKWq1","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"AQJK2yeTzCtvLJJGOP27B","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
